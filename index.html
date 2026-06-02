@@ -3,497 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://mybiomaker.info/" />
   <title>Bio Generator – Create the Perfect Social Media Bio</title>
   <meta name="description" content="Generate a professional, catchy or funny bio for Instagram, Twitter, LinkedIn, TikTok and more. Free AI-powered bio generator tool." />
   <meta name="keywords" content="bio generator, instagram bio, twitter bio, linkedin bio, social media bio, profile bio generator" />
-
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231a1a2e'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-size='36'>✍️</text></svg>" />
-
-  <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8825736074631088" crossorigin="anonymous"></script>
-
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-
   <style>
-    :root {
-      --black:   #0D0D0D;
-      --dark:    #1A1A2E;
-      --gold:    #C9A84C;
-      --gold2:   #E8C97A;
-      --cream:   #F8F4ED;
-      --white:   #FFFFFF;
-      --gray:    #6B7280;
-      --border:  #E5E0D8;
-      --radius:  12px;
-    }
+    :root { --black:#0D0D0D; --dark:#1A1A2E; --gold:#C9A84C; --gold2:#E8C97A; --cream:#F8F4ED; --white:#FFFFFF; --gray:#6B7280; --border:#E5E0D8; --radius:12px; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--black);
-      min-height: 100vh;
-    }
-
-    /* ── HEADER ── */
-    header {
-      background: var(--dark);
-      padding: 2.5rem 1rem 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-    .logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: 2px;
-    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--black); min-height: 100vh; }
+    header { background: var(--dark); padding: 2.5rem 1rem 2rem; text-align: center; position: relative; overflow: hidden; }
+    header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 700; color: var(--white); letter-spacing: 2px; }
     .logo span { color: var(--gold); }
-    header p {
-      color: rgba(255,255,255,0.55);
-      font-size: 0.9rem;
-      font-weight: 300;
-      margin-top: 0.4rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    /* ── MAIN ── */
-    main {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 2.5rem 1rem 5rem;
-    }
-
-    /* ── AD ── */
-    .ad-slot {
-      background: #f0ece4;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 0.5rem;
-      text-align: center;
-      min-height: 90px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
-
-    /* ── FORM CARD ── */
-    .form-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem 2rem 2.5rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.04);
-    }
-    .form-card h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--border);
-    }
+    header p { color: rgba(255,255,255,0.55); font-size: 0.9rem; font-weight: 300; margin-top: 0.4rem; letter-spacing: 1px; text-transform: uppercase; }
+    main { max-width: 780px; margin: 0 auto; padding: 2.5rem 1rem 5rem; }
+    .ad-slot { background: #f0ece4; border: 1px solid var(--border); border-radius: var(--radius); padding: 0.5rem; text-align: center; min-height: 90px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; }
+    .form-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem 2rem 2.5rem; margin-bottom: 2rem; box-shadow: 0 2px 20px rgba(0,0,0,0.04); }
+    .form-card h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--dark); margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
     .form-card h2 span { color: var(--gold); }
-
-    /* ── PLATFORM TABS ── */
-    .platform-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 0.6rem;
-      margin-bottom: 1.5rem;
-    }
-    .platform-btn {
-      padding: 0.6rem 0.5rem;
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      background: var(--cream);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all .18s;
-      color: var(--gray);
-      text-align: center;
-    }
-    .platform-btn.active {
-      border-color: var(--gold);
-      background: var(--dark);
-      color: var(--gold);
-    }
-    .platform-btn:hover:not(.active) {
-      border-color: var(--gold);
-      color: var(--dark);
-    }
-
-    /* ── FORM FIELDS ── */
+    .platform-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.6rem; margin-bottom: 1.5rem; }
+    .platform-btn { padding: 0.6rem 0.5rem; border: 1.5px solid var(--border); border-radius: 8px; background: var(--cream); font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all .18s; color: var(--gray); text-align: center; }
+    .platform-btn.active { border-color: var(--gold); background: var(--dark); color: var(--gold); }
+    .platform-btn:hover:not(.active) { border-color: var(--gold); color: var(--dark); }
     .field { margin-bottom: 1.2rem; }
-    .field label {
-      display: block;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--gray);
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-bottom: 0.4rem;
-    }
-    .field input,
-    .field select,
-    .field textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95rem;
-      color: var(--black);
-      background: var(--cream);
-      outline: none;
-      transition: border-color .2s;
-      resize: vertical;
-    }
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus { border-color: var(--gold); background: var(--white); }
-    .field input::placeholder,
-    .field textarea::placeholder { color: #bbb; }
-
-    .fields-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    /* ── TONE SELECTOR ── */
-    .tone-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .tone-btn {
-      padding: 0.4rem 0.9rem;
-      border: 1.5px solid var(--border);
-      border-radius: 20px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.83rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all .18s;
-      background: transparent;
-      color: var(--gray);
-    }
+    .field label { display: block; font-size: 0.82rem; font-weight: 500; color: var(--gray); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 0.4rem; }
+    .field input, .field select, .field textarea { width: 100%; padding: 0.75rem 1rem; border: 1.5px solid var(--border); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--black); background: var(--cream); outline: none; transition: border-color .2s; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--gold); background: var(--white); }
+    .fields-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .tone-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tone-btn { padding: 0.4rem 0.9rem; border: 1.5px solid var(--border); border-radius: 20px; font-family: 'DM Sans', sans-serif; font-size: 0.83rem; font-weight: 500; cursor: pointer; transition: all .18s; background: transparent; color: var(--gray); }
     .tone-btn.active { border-color: var(--gold); background: var(--gold); color: var(--dark); font-weight: 600; }
-    .tone-btn:hover:not(.active) { border-color: var(--gold); color: var(--dark); }
-
-    /* ── GENERATE BUTTON ── */
-    .btn-generate {
-      width: 100%;
-      padding: 1rem;
-      background: var(--dark);
-      color: var(--gold);
-      border: none;
-      border-radius: var(--radius);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      cursor: pointer;
-      transition: all .2s;
-      margin-top: 1.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .btn-generate::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--gold);
-      transform: scaleX(0);
-      transition: transform .3s;
-    }
+    .btn-generate { width: 100%; padding: 1rem; background: var(--dark); color: var(--gold); border: none; border-radius: var(--radius); font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; cursor: pointer; transition: all .2s; margin-top: 1.5rem; }
     .btn-generate:hover { background: #0d1117; }
-    .btn-generate:hover::after { transform: scaleX(1); }
-    .btn-generate:active { transform: scale(0.99); }
-
-    /* ── RESULTS ── */
     .results-section { margin: 2rem 0; }
-    .results-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-    .results-title::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    .bio-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.03);
-      position: relative;
-      transition: box-shadow .2s;
-    }
-    .bio-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
-    .bio-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.75rem;
-    }
-    .bio-label {
-      font-size: 0.75rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--gold);
-      background: var(--dark);
-      padding: 3px 10px;
-      border-radius: 20px;
-    }
+    .results-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem; }
+    .results-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .bio-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 12px rgba(0,0,0,0.03); }
+    .bio-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+    .bio-label { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); background: var(--dark); padding: 3px 10px; border-radius: 20px; }
     .bio-actions { display: flex; gap: 0.5rem; }
-    .btn-copy, .btn-regen {
-      padding: 0.35rem 0.85rem;
-      border-radius: 6px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all .15s;
-    }
-    .btn-copy {
-      background: var(--cream);
-      border: 1px solid var(--border);
-      color: var(--gray);
-    }
+    .btn-copy, .btn-regen { padding: 0.35rem 0.85rem; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 500; cursor: pointer; transition: all .15s; }
+    .btn-copy { background: var(--cream); border: 1px solid var(--border); color: var(--gray); }
     .btn-copy:hover { background: var(--dark); color: var(--gold); border-color: var(--dark); }
-    .btn-regen {
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--gray);
-    }
+    .btn-regen { background: transparent; border: 1px solid var(--border); color: var(--gray); }
     .btn-regen:hover { border-color: var(--gold); color: var(--gold); }
-    .bio-text {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--black);
-    }
-    .char-count {
-      font-size: 0.75rem;
-      color: var(--gray);
-      margin-top: 0.6rem;
-      text-align: right;
-    }
-
-    /* ── STATES ── */
-    .state-empty {
-      text-align: center;
-      padding: 3rem 1rem;
-      color: var(--gray);
-    }
+    .bio-text { font-size: 1rem; line-height: 1.7; color: var(--black); }
+    .char-count { font-size: 0.75rem; color: var(--gray); margin-top: 0.6rem; text-align: right; }
+    .state-empty { text-align: center; padding: 3rem 1rem; color: var(--gray); }
     .state-empty .icon { font-size: 3rem; margin-bottom: 0.75rem; display: block; }
-    .state-empty p { font-size: 0.95rem; }
-
-    /* ── LOADER ── */
     .loader-wrap { text-align: center; padding: 3rem; }
-    .loader {
-      display: inline-block;
-      width: 32px; height: 32px;
-      border: 3px solid var(--border);
-      border-top-color: var(--gold);
-      border-radius: 50%;
-      animation: spin .8s linear infinite;
-    }
+    .loader { display: inline-block; width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--gold); border-radius: 50%; animation: spin .8s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
-    .loader-wrap p { margin-top: 1rem; color: var(--gray); font-size: 0.9rem; }
-
-    /* ── TOAST ── */
-    #toast {
-      position: fixed;
-      bottom: 1.5rem; left: 50%;
-      transform: translateX(-50%) translateY(80px);
-      background: var(--dark);
-      color: var(--gold);
-      padding: 0.65rem 1.5rem;
-      border-radius: 30px;
-      font-weight: 500;
-      font-size: 0.9rem;
-      transition: transform .3s;
-      z-index: 9999;
-      pointer-events: none;
-      border: 1px solid var(--gold);
-    }
+    #toast { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--dark); color: var(--gold); padding: 0.65rem 1.5rem; border-radius: 30px; font-weight: 500; font-size: 0.9rem; transition: transform .3s; z-index: 9999; pointer-events: none; border: 1px solid var(--gold); }
     #toast.show { transform: translateX(-50%) translateY(0); }
-
-    /* ── HOW IT WORKS ── */
-    .how-section {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem;
-      margin: 2rem 0;
-    }
-    .how-section h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 1.25rem;
-    }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1.25rem;
-    }
+    .how-section { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; margin: 2rem 0; }
+    .how-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--dark); margin-bottom: 1.25rem; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.25rem; }
     .step { text-align: center; }
-    .step .num {
-      width: 36px; height: 36px;
-      border-radius: 50%;
-      background: var(--dark);
-      color: var(--gold);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 0.6rem;
-    }
+    .step .num { width: 36px; height: 36px; border-radius: 50%; background: var(--dark); color: var(--gold); font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.6rem; }
     .step strong { display: block; font-size: 0.9rem; margin-bottom: 0.3rem; }
     .step span { font-size: 0.82rem; color: var(--gray); line-height: 1.5; }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--dark);
-      color: rgba(255,255,255,0.4);
-      text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.85rem;
-    }
+    footer { background: var(--dark); color: rgba(255,255,255,0.4); text-align: center; padding: 1.5rem 1rem; font-size: 0.85rem; }
     footer a { color: var(--gold); text-decoration: none; font-weight: 500; }
-    footer a:hover { text-decoration: underline; }
-
-    /* ── COOKIE BANNER ── */
-    #cookie-banner {
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      background: var(--dark);
-      color: rgba(255,255,255,0.8);
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      z-index: 9990;
-      flex-wrap: wrap;
-      border-top: 1px solid rgba(201,168,76,0.3);
-    }
+    #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: var(--dark); color: rgba(255,255,255,0.8); padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; z-index: 9990; flex-wrap: wrap; border-top: 1px solid rgba(201,168,76,0.3); }
     #cookie-banner p { font-size: 0.85rem; flex: 1; }
     #cookie-banner a { color: var(--gold); }
-    .btn-decline {
-      background: transparent;
-      color: rgba(255,255,255,0.6);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 8px;
-      padding: 0.55rem 1.2rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-    .btn-decline:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
-    .btn-accept {
-      background: var(--gold);
-      color: var(--dark);
-      border: none;
-      border-radius: 8px;
-      padding: 0.55rem 1.4rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-    .btn-accept:hover { background: var(--gold2); }
-
-    /* ── NICHE GRID ── */
-    .niche-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
-    .niche-btn {
-      padding: 0.5rem 1rem;
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      background: var(--cream);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all .18s;
-      color: var(--dark);
-    }
-    .niche-btn:hover {
-      border-color: var(--gold);
-      background: var(--dark);
-      color: var(--gold);
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 540px) {
-      .logo { font-size: 2.2rem; }
-      .fields-row { grid-template-columns: 1fr; }
-    }
+    .btn-decline { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 0.55rem 1.2rem; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; cursor: pointer; white-space: nowrap; }
+    .btn-accept { background: var(--gold); color: var(--dark); border: none; border-radius: 8px; padding: 0.55rem 1.4rem; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .niche-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .niche-btn { padding: 0.5rem 1rem; border: 1.5px solid var(--border); border-radius: 8px; background: var(--cream); font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 500; cursor: pointer; transition: all .18s; color: var(--dark); }
+    .niche-btn:hover { border-color: var(--gold); background: var(--dark); color: var(--gold); transform: translateY(-2px); }
+    @media (max-width: 540px) { .logo { font-size: 2.2rem; } .fields-row { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-
-  <!-- HEADER -->
   <header>
     <div class="logo">Bio<span>Generator</span></div>
     <p>Craft your perfect social media presence</p>
   </header>
-
   <main>
-
-    <!-- AD TOP -->
     <div class="ad-slot">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-8825736074631088"
-           data-ad-slot="AUTO"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8825736074631088" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-
-    <!-- FORM -->
     <div class="form-card">
       <h2>Create Your <span>Perfect Bio</span></h2>
-
-      <!-- PLATFORM -->
       <div class="field">
         <label>Platform</label>
         <div class="platform-grid">
@@ -505,30 +102,12 @@
           <button class="platform-btn" onclick="selectPlatform(this, 'General')">🌐 General</button>
         </div>
       </div>
-
-      <!-- FIELDS -->
       <div class="fields-row">
-        <div class="field">
-          <label>Your Name / Brand</label>
-          <input type="text" id="nameInput" placeholder="e.g. Sarah, @mybrand…" />
-        </div>
-        <div class="field">
-          <label>Job / Role / Niche</label>
-          <input type="text" id="roleInput" placeholder="e.g. Photographer, CEO…" />
-        </div>
+        <div class="field"><label>Your Name / Brand</label><input type="text" id="nameInput" placeholder="e.g. Sarah, @mybrand…" /></div>
+        <div class="field"><label>Job / Role / Niche</label><input type="text" id="roleInput" placeholder="e.g. Photographer, CEO…" /></div>
       </div>
-
-      <div class="field">
-        <label>Keywords / Interests (optional)</label>
-        <input type="text" id="keywordsInput" placeholder="e.g. travel, coffee, mindfulness, dog lover…" />
-      </div>
-
-      <div class="field">
-        <label>Anything else to include? (optional)</label>
-        <textarea id="extraInput" rows="2" placeholder="e.g. based in Paris, mom of 2, contact email…"></textarea>
-      </div>
-
-      <!-- TONE -->
+      <div class="field"><label>Keywords / Interests (optional)</label><input type="text" id="keywordsInput" placeholder="e.g. travel, coffee, mindfulness, dog lover…" /></div>
+      <div class="field"><label>Anything else to include? (optional)</label><textarea id="extraInput" rows="2" placeholder="e.g. based in Paris, mom of 2, contact email…"></textarea></div>
       <div class="field">
         <label>Tone</label>
         <div class="tone-grid">
@@ -540,57 +119,24 @@
           <button class="tone-btn" onclick="selectTone(this)">🧠 Minimal</button>
         </div>
       </div>
-
       <button class="btn-generate" onclick="generateBios()">✦ Generate My Bio</button>
     </div>
-
-    <!-- RESULTS -->
     <div class="results-section" id="results">
-      <div class="state-empty">
-        <span class="icon">✍️</span>
-        <p>Fill in your details above and generate your perfect bio.</p>
-      </div>
+      <div class="state-empty"><span class="icon">✍️</span><p>Fill in your details above and generate your perfect bio.</p></div>
     </div>
-
-    <!-- AD MIDDLE -->
     <div class="ad-slot">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-8825736074631088"
-           data-ad-slot="AUTO"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8825736074631088" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-
-    <!-- HOW IT WORKS -->
     <div class="how-section">
       <h2>How It Works</h2>
       <div class="steps">
-        <div class="step">
-          <div class="num">1</div>
-          <strong>Choose your platform</strong>
-          <span>Each platform has its own style and character limits.</span>
-        </div>
-        <div class="step">
-          <div class="num">2</div>
-          <strong>Fill your details</strong>
-          <span>Name, role, interests — the more you add, the better.</span>
-        </div>
-        <div class="step">
-          <div class="num">3</div>
-          <strong>Pick a tone</strong>
-          <span>Professional, funny, bold — your choice.</span>
-        </div>
-        <div class="step">
-          <div class="num">4</div>
-          <strong>Copy & use</strong>
-          <span>Get 3 variations, pick your favourite and paste it!</span>
-        </div>
+        <div class="step"><div class="num">1</div><strong>Choose your platform</strong><span>Each platform has its own style and character limits.</span></div>
+        <div class="step"><div class="num">2</div><strong>Fill your details</strong><span>Name, role, interests — the more you add, the better.</span></div>
+        <div class="step"><div class="num">3</div><strong>Pick a tone</strong><span>Professional, funny, bold — your choice.</span></div>
+        <div class="step"><div class="num">4</div><strong>Copy & use</strong><span>Get 3 variations, pick your favourite and paste it!</span></div>
       </div>
     </div>
-
-    <!-- BIO EXAMPLES BY NICHE -->
     <div class="how-section" style="margin-bottom:2rem;">
       <h2 style="margin-bottom:0.3rem;">Bio Examples by Niche</h2>
       <p style="font-size:0.85rem;color:var(--gray);margin-bottom:1.25rem;">Click any niche to instantly generate bios tailored for that profile.</p>
@@ -609,29 +155,13 @@
         <button class="niche-btn" onclick="loadNiche('🎮 Gamer','content creator & gamer','gaming, streaming, esports, reviews','Live every night')">🎮 Gamer</button>
       </div>
     </div>
-
-    <!-- AD BOTTOM -->
     <div class="ad-slot">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-8825736074631088"
-           data-ad-slot="AUTO"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8825736074631088" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-
   </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 BioGenerator &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a></p>
-  </footer>
-
-  <!-- TOAST -->
+  <footer><p>© 2025 BioGenerator &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a></p></footer>
   <div id="toast">Copied to clipboard ✓</div>
-
-  <!-- COOKIE BANNER -->
   <div id="cookie-banner">
     <p>🍪 We use cookies to serve ads and improve your experience. See our <a href="privacy.html">Privacy Policy</a>.</p>
     <div style="display:flex;gap:0.5rem;flex-shrink:0;">
@@ -639,156 +169,74 @@
       <button class="btn-accept" onclick="acceptCookies()">Accept</button>
     </div>
   </div>
-
   <script>
     function loadNiche(name, role, keywords, extra) {
       document.getElementById('nameInput').value = '';
       document.getElementById('roleInput').value = role;
       document.getElementById('keywordsInput').value = keywords;
       document.getElementById('extraInput').value = extra;
-      // Scroll to form smoothly
       document.querySelector('.form-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // Auto-generate after short delay
       setTimeout(() => generateBios(), 600);
     }
-
     let selectedPlatform = 'Instagram';
     let selectedTone = 'Professional';
-
-    // Cookie banner
-    (function () {
-      if (localStorage.getItem('cookie_ok')) document.getElementById('cookie-banner').style.display = 'none';
-    })();
-    function acceptCookies() {
-      localStorage.setItem('cookie_ok', 'accepted');
-      document.getElementById('cookie-banner').style.display = 'none';
-    }
-    function declineCookies() {
-      localStorage.setItem('cookie_ok', 'declined');
-      document.getElementById('cookie-banner').style.display = 'none';
-    }
-
-    function selectPlatform(btn, name) {
-      document.querySelectorAll('.platform-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedPlatform = name;
-    }
-
-    function selectTone(btn) {
-      document.querySelectorAll('.tone-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedTone = btn.textContent.replace(/[^\w\s\/]/g, '').trim();
-    }
-
-    // ── Bio templates ──
+    (function () { if (localStorage.getItem('cookie_ok')) document.getElementById('cookie-banner').style.display = 'none'; })();
+    function acceptCookies() { localStorage.setItem('cookie_ok', 'accepted'); document.getElementById('cookie-banner').style.display = 'none'; }
+    function declineCookies() { localStorage.setItem('cookie_ok', 'declined'); document.getElementById('cookie-banner').style.display = 'none'; }
+    function selectPlatform(btn, name) { document.querySelectorAll('.platform-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); selectedPlatform = name; }
+    function selectTone(btn) { document.querySelectorAll('.tone-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); selectedTone = btn.textContent.replace(/[^\w\s\/]/g, '').trim(); }
     function generateBioText(name, role, keywords, extra, platform, tone) {
       const kw = keywords ? keywords.split(',').map(k => k.trim()).filter(Boolean) : [];
       const kwStr = kw.slice(0, 3).join(' · ');
       const emoji = { Instagram: '📸', 'Twitter/X': '𝕏', LinkedIn: '💼', TikTok: '🎵', YouTube: '▶️', General: '🌐' };
       const e = emoji[platform] || '🌐';
-
       const templates = {
-        Professional: [
-          `${name ? name + ' | ' : ''}${role || 'Creator'}${kwStr ? ' · ' + kwStr : ''}${extra ? ' · ' + extra : ''}`,
-          `${role || 'Professional'} & ${kw[0] || 'content creator'}. ${extra || 'Sharing insights and ideas.'} ${name ? '— ' + name : ''}`,
-          `${e} ${role || 'Creator'} | ${kwStr || 'Passionate about sharing'} | ${extra || 'Let\'s connect'}`
-        ],
-        Funny: [
-          `${role || 'Human'} by day, ${kw[0] || 'content creator'} by night 🌙 ${extra || ''} ${name ? '| ' + name : ''}`.trim(),
-          `Professionally ${kw[0] || 'awesome'} 🏆 | ${role || 'Doing things'} | ${extra || 'Coffee addict ☕'}`,
-          `I ${kw[0] ? 'love ' + kw[0] : 'exist'} and other controversial opinions 😅 | ${role || 'Creator'} | ${extra || ''}`
-        ],
-        Casual: [
-          `just a ${role || 'person'} who loves ${kwStr || 'life'} ✌️ ${extra || ''}`.trim(),
-          `${name || 'hey'} here 👋 | ${role || 'creator'} | into ${kwStr || 'cool stuff'} | ${extra || 'dm me anytime'}`,
-          `living for ${kw[0] || 'good vibes'} & ${kw[1] || 'great content'} 🌿 ${role ? '| ' + role : ''} ${extra ? '| ' + extra : ''}`
-        ],
-        Bold: [
-          `${role ? role.toUpperCase() : 'CREATOR'} ⚡ ${kwStr || 'Making moves'} ${extra ? '| ' + extra : ''} ${name ? '— ' + name : ''}`.trim(),
-          `Not your average ${role || 'creator'} 🔥 | ${kwStr || 'Breaking the rules'} | ${extra || 'Watch this space'}`,
-          `${name || 'I'} build, create, inspire. ${role || ''} · ${kwStr || 'No limits'} ⚡ ${extra || ''}`
-        ],
-        Creative: [
-          `${role || 'Creative soul'} weaving ${kw[0] || 'stories'} & ${kw[1] || 'ideas'} into reality ✨ ${extra || ''} ${name ? '| ' + name : ''}`.trim(),
-          `✦ ${role || 'Artist'} · ${kwStr || 'Dreamer · Maker'} · ${extra || 'Creating worlds one post at a time'} ✦`,
-          `Where ${kw[0] || 'creativity'} meets ${kw[1] || 'passion'} 🌙 ${role ? '| ' + role : ''} ${extra ? '| ' + extra : ''} ${name ? '— ' + name : ''}`
-        ],
-        Minimal: [
-          `${role || 'Creator'}${kwStr ? '. ' + kwStr : ''}${extra ? '. ' + extra : ''}${name ? ' — ' + name : ''}`.trim(),
-          `${name || ''}${role ? (name ? ' · ' : '') + role : ''}${kw[0] ? ' · ' + kw[0] : ''}${extra ? ' · ' + extra : ''}`.replace(/^·\s*/, '').trim(),
-          `${role || 'Here'}. ${kw[0] || 'Creating'}. ${extra || 'Always.'}`
-        ]
+        Professional: [`${name ? name + ' | ' : ''}${role || 'Creator'}${kwStr ? ' · ' + kwStr : ''}${extra ? ' · ' + extra : ''}`, `${role || 'Professional'} & ${kw[0] || 'content creator'}. ${extra || 'Sharing insights and ideas.'} ${name ? '— ' + name : ''}`, `${e} ${role || 'Creator'} | ${kwStr || 'Passionate about sharing'} | ${extra || "Let's connect"}`],
+        Funny: [`${role || 'Human'} by day, ${kw[0] || 'content creator'} by night 🌙 ${extra || ''} ${name ? '| ' + name : ''}`.trim(), `Professionally ${kw[0] || 'awesome'} 🏆 | ${role || 'Doing things'} | ${extra || 'Coffee addict ☕'}`, `I ${kw[0] ? 'love ' + kw[0] : 'exist'} and other controversial opinions 😅 | ${role || 'Creator'} | ${extra || ''}`],
+        Casual: [`just a ${role || 'person'} who loves ${kwStr || 'life'} ✌️ ${extra || ''}`.trim(), `${name || 'hey'} here 👋 | ${role || 'creator'} | into ${kwStr || 'cool stuff'} | ${extra || 'dm me anytime'}`, `living for ${kw[0] || 'good vibes'} & ${kw[1] || 'great content'} 🌿 ${role ? '| ' + role : ''} ${extra ? '| ' + extra : ''}`],
+        Bold: [`${role ? role.toUpperCase() : 'CREATOR'} ⚡ ${kwStr || 'Making moves'} ${extra ? '| ' + extra : ''} ${name ? '— ' + name : ''}`.trim(), `Not your average ${role || 'creator'} 🔥 | ${kwStr || 'Breaking the rules'} | ${extra || 'Watch this space'}`, `${name || 'I'} build, create, inspire. ${role || ''} · ${kwStr || 'No limits'} ⚡ ${extra || ''}`],
+        Creative: [`${role || 'Creative soul'} weaving ${kw[0] || 'stories'} & ${kw[1] || 'ideas'} into reality ✨ ${extra || ''} ${name ? '| ' + name : ''}`.trim(), `✦ ${role || 'Artist'} · ${kwStr || 'Dreamer · Maker'} · ${extra || 'Creating worlds one post at a time'} ✦`, `Where ${kw[0] || 'creativity'} meets ${kw[1] || 'passion'} 🌙 ${role ? '| ' + role : ''} ${extra ? '| ' + extra : ''} ${name ? '— ' + name : ''}`],
+        Minimal: [`${role || 'Creator'}${kwStr ? '. ' + kwStr : ''}${extra ? '. ' + extra : ''}${name ? ' — ' + name : ''}`.trim(), `${name || ''}${role ? (name ? ' · ' : '') + role : ''}${kw[0] ? ' · ' + kw[0] : ''}${extra ? ' · ' + extra : ''}`.replace(/^·\s*/, '').trim(), `${role || 'Here'}. ${kw[0] || 'Creating'}. ${extra || 'Always.'}`]
       };
-
       const toneKey = Object.keys(templates).find(t => selectedTone.toLowerCase().includes(t.toLowerCase())) || 'Professional';
       return templates[toneKey];
     }
-
     function generateBios() {
-      const name     = document.getElementById('nameInput').value.trim();
-      const role     = document.getElementById('roleInput').value.trim();
+      const name = document.getElementById('nameInput').value.trim();
+      const role = document.getElementById('roleInput').value.trim();
       const keywords = document.getElementById('keywordsInput').value.trim();
-      const extra    = document.getElementById('extraInput').value.trim();
-
-      if (!name && !role && !keywords) {
-        alert('Please fill in at least your name or role to generate a bio!');
-        return;
-      }
-
+      const extra = document.getElementById('extraInput').value.trim();
+      if (!name && !role && !keywords) { alert('Please fill in at least your name or role to generate a bio!'); return; }
       const resultsEl = document.getElementById('results');
       resultsEl.innerHTML = '<div class="loader-wrap"><div class="loader"></div><p>Crafting your bios…</p></div>';
-
       setTimeout(() => {
         const bios = generateBioText(name, role, keywords, extra, selectedPlatform, selectedTone);
         const labels = ['Option 1', 'Option 2', 'Option 3'];
         const charLimits = { Instagram: 150, 'Twitter/X': 160, LinkedIn: 220, TikTok: 80, YouTube: 1000, General: 200 };
         const limit = charLimits[selectedPlatform] || 200;
-
         let html = `<div class="results-title">Your Bios for ${selectedPlatform}</div>`;
         bios.forEach((bio, i) => {
           const charColor = bio.length > limit ? '#e24b4a' : '#639922';
-          html += `
-            <div class="bio-card">
-              <div class="bio-card-header">
-                <span class="bio-label">${labels[i]}</span>
-                <div class="bio-actions">
-                  <button class="btn-regen" onclick="regenOne(${i})">↺ Regenerate</button>
-                  <button class="btn-copy" onclick="copyBio(this, '${escapeQuotes(bio)}')">Copy</button>
-                </div>
-              </div>
-              <p class="bio-text" id="bio-${i}">${bio}</p>
-              <p class="char-count" style="color:${charColor}">${bio.length} / ${limit} chars</p>
-            </div>`;
+          html += `<div class="bio-card"><div class="bio-card-header"><span class="bio-label">${labels[i]}</span><div class="bio-actions"><button class="btn-regen" onclick="regenOne(${i})">↺ Regenerate</button><button class="btn-copy" onclick="copyBio(this, '${escapeQuotes(bio)}')">Copy</button></div></div><p class="bio-text" id="bio-${i}">${bio}</p><p class="char-count" style="color:${charColor}">${bio.length} / ${limit} chars</p></div>`;
         });
-
         resultsEl.innerHTML = html;
         window._lastBios = bios;
         window._lastParams = { name, role, keywords, extra };
       }, 800);
     }
-
     function regenOne(index) {
       const p = window._lastParams || {};
       const bios = generateBioText(p.name, p.role, p.keywords, p.extra, selectedPlatform, selectedTone);
       const el = document.getElementById('bio-' + index);
-      if (el) {
-        const shuffled = bios.sort(() => Math.random() - 0.5);
-        el.textContent = shuffled[0];
-        window._lastBios[index] = shuffled[0];
-      }
+      if (el) { const shuffled = bios.sort(() => Math.random() - 0.5); el.textContent = shuffled[0]; window._lastBios[index] = shuffled[0]; }
     }
-
     function copyBio(btn, text) {
       navigator.clipboard.writeText(text).catch(() => {});
       const toast = document.getElementById('toast');
       toast.classList.add('show');
       setTimeout(() => toast.classList.remove('show'), 1800);
     }
-
-    function escapeQuotes(str) {
-      return str.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-    }
+    function escapeQuotes(str) { return str.replace(/'/g, "\\'").replace(/"/g, '&quot;'); }
   </script>
-
 </body>
 </html>
