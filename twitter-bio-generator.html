@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.mybiomaker.info/twitter-bio-generator.html" />
+  <title>Twitter Bio Generator — Free X/Twitter Bio Ideas</title>
+  <meta name="description" content="Free Twitter/X bio generator. Create a witty, compelling Twitter bio in seconds. Perfect for creators, journalists, entrepreneurs and personal brands.">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,sans-serif;background:#000;color:#fff;min-height:100vh}
+    header{background:#000;border-bottom:1px solid #2f3336;padding:14px 24px;display:flex;align-items:center;gap:12px}
+    header h1{font-size:20px;font-weight:500}
+    header a{color:#888;text-decoration:none;font-size:14px;margin-left:auto}
+    header a:hover{color:#1d9bf0}
+    .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+    .hero{text-align:center;margin-bottom:2.5rem}
+    .hero h2{font-size:28px;font-weight:600;margin-bottom:8px;color:#1d9bf0}
+    .hero p{font-size:15px;color:#71767b;line-height:1.6}
+    .card{background:#16181c;border-radius:12px;padding:2rem;margin-bottom:2rem;border:1px solid #2f3336}
+    label{font-size:14px;color:#71767b;display:block;margin-bottom:6px;font-weight:500}
+    input,select{width:100%;padding:12px;background:#000;border:1px solid #2f3336;border-radius:8px;color:#fff;font-size:15px;margin-bottom:1.25rem;font-family:system-ui,sans-serif}
+    button.main-btn{width:100%;padding:14px;background:#1d9bf0;border:none;border-radius:8px;color:#fff;font-size:16px;font-weight:500;cursor:pointer}
+    button.main-btn:hover{background:#1a8cd8}
+    .result-box{background:#000;border-radius:8px;padding:1.5rem;margin-top:1.5rem;display:none;border:1px solid #2f3336}
+    .result-bio{font-size:15px;line-height:1.7;color:#fff;margin-bottom:0.5rem;white-space:pre-line}
+    .char-count{font-size:12px;color:#71767b;margin-bottom:1rem}
+    .copy-btn{padding:10px 20px;background:#1d9bf0;border:none;border-radius:20px;color:#fff;font-size:14px;cursor:pointer;font-weight:500}
+    .copy-btn:hover{background:#1a8cd8}
+    .examples{display:grid;gap:1rem;margin-top:1rem}
+    .example-card{background:#000;border-radius:8px;padding:1rem;border:1px solid #2f3336}
+    .example-tag{font-size:11px;color:#1d9bf0;font-weight:600;margin-bottom:0.5rem}
+    .example-text{font-size:14px;color:#e7e9ea;line-height:1.6}
+    .seo-section{max-width:800px;margin:2rem auto;padding:0 1rem;color:#71767b;line-height:1.7}
+    .seo-section h2{font-size:1.4rem;margin-bottom:1rem;color:#fff}
+    .seo-section h3{font-size:1.1rem;margin:1.5rem 0 0.5rem;color:#fff}
+    .seo-section p{margin-bottom:1rem}
+    .seo-section ul{padding-left:1.2rem;margin-bottom:1rem}
+    .seo-section li{margin-bottom:0.5rem}
+    footer{text-align:center;padding:2rem;font-size:12px;color:#555;border-top:1px solid #2f3336;margin-top:2rem}
+    footer a{color:#1d9bf0;text-decoration:none}
+  </style>
+</head>
+<body>
+<header>
+  <h1>🧬 MyBioMaker</h1>
+  <a href="/">← Back to Bio Generator</a>
+</header>
+<div class="container">
+  <div class="hero">
+    <h2>Twitter / X Bio Generator</h2>
+    <p>Create a sharp, witty Twitter bio that makes people click Follow. 160 characters, zero fluff.</p>
+  </div>
+  <div class="card">
+    <label for="name">Your name or handle</label>
+    <input type="text" id="name" placeholder="e.g. Alex Chen, @techwithalex...">
+    <label for="role">What do you do?</label>
+    <input type="text" id="role" placeholder="e.g. Journalist, Developer, Startup founder...">
+    <label for="topics">What do you tweet about?</label>
+    <input type="text" id="topics" placeholder="e.g. AI, startups, politics, football...">
+    <label for="tone">Tone</label>
+    <select id="tone">
+      <option value="witty">Witty & Sharp</option>
+      <option value="professional">Professional</option>
+      <option value="casual">Casual & Friendly</option>
+      <option value="funny">Funny & Self-aware</option>
+      <option value="minimal">Minimal</option>
+    </select>
+    <label for="extra">One extra detail (optional)</label>
+    <input type="text" id="extra" placeholder="e.g. Based in London, Ex-Google, Dad of 2...">
+    <button class="main-btn" onclick="generateBio()">𝕏 Generate Twitter Bio</button>
+    <div class="result-box" id="result">
+      <div class="result-bio" id="bio-text"></div>
+      <div class="char-count" id="char-count"></div>
+      <button class="copy-btn" onclick="copyBio()">Copy Bio</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="font-size:1.1rem;margin-bottom:1rem;color:#1d9bf0">𝕏 Twitter Bio Examples</h3>
+    <div class="examples">
+      <div class="example-card">
+        <div class="example-tag">TECH JOURNALIST</div>
+        <div class="example-text">Covering AI & startups for @TechCrunch | Previously @Wired | Opinions are my own (and occasionally wrong) | Tips: DM open</div>
+      </div>
+      <div class="example-card">
+        <div class="example-tag">STARTUP FOUNDER</div>
+        <div class="example-text">Building @MyStartup | Tweets about SaaS, growth & the occasional failure | Ex-@Google | London 🇬🇧</div>
+      </div>
+      <div class="example-card">
+        <div class="example-tag">FUNNY & PERSONAL</div>
+        <div class="example-text">Software engineer by day, terrible cook by night | Tweets about code, coffee & things that make me irrationally angry | he/him</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="seo-section">
+  <h2>How to Write a Great Twitter/X Bio</h2>
+  <p>Your Twitter bio has 160 characters to tell the world who you are and why they should follow you. The best Twitter bios are specific, personality-driven, and give a clear sense of what kind of content you share. Generic bios ("Lover of life | Coffee addict | Dog mom") blend into the background — specific bios stand out.</p>
+
+  <h2>Twitter Bio Formula That Works</h2>
+  <p>The most effective Twitter bios follow a simple structure: Role + Topics + Personality touch + Optional extra (location, employer, disclaimer). For example: "UX designer at @Figma | Tweets about design systems, accessibility & the occasional hot take | Based in Amsterdam."</p>
+
+  <h2>Twitter Bio Tips</h2>
+  <ul>
+    <li><strong>Be specific about your topics</strong> — "I tweet about AI" is better than "Tech enthusiast." "AI policy & regulation" is better still.</li>
+    <li><strong>Show personality</strong> — a self-aware joke, an unexpected detail, or a dry observation makes your bio memorable.</li>
+    <li><strong>Use "opinions my own"</strong> — if you work for a company but tweet independently, this disclaimer signals authenticity.</li>
+    <li><strong>Include your location</strong> — it helps people find like-minded local connections and adds context to your perspective.</li>
+    <li><strong>Don't waste characters on adjectives</strong> — "passionate," "enthusiastic," and "lover of" add nothing. Replace them with specifics.</li>
+  </ul>
+
+  <h2>Frequently Asked Questions</h2>
+  <h3>How long can a Twitter bio be?</h3>
+  <p>Twitter/X bios are limited to 160 characters — slightly longer than Instagram but still very short. Every word needs to earn its place.</p>
+  <h3>What should I put in my Twitter bio?</h3>
+  <p>Include: your role or what you tweet about, a personality touch, and optionally your location or employer. Avoid vague adjectives — specificity is everything on Twitter.</p>
+  <h3>Should I use hashtags in my Twitter bio?</h3>
+  <p>Generally no — hashtags in bios used to help with discovery but are less effective now. Use the space for personality and specifics instead.</p>
+  <h3>Is the Twitter bio generator free?</h3>
+  <p>Yes, completely free. No sign-up needed — generate as many versions as you like.</p>
+</section>
+
+<footer>
+  © 2026 MyBioMaker.info — <a href="/">Bio Generator</a> · <a href="/instagram-bio-generator.html">Instagram Bio</a> · <a href="/linkedin-bio-generator.html">LinkedIn Bio</a> · <a href="/tiktok-bio-generator.html">TikTok Bio</a> · <a href="/privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+function generateBio() {
+  const name = document.getElementById('name').value.trim();
+  const role = document.getElementById('role').value.trim();
+  const topics = document.getElementById('topics').value.trim();
+  const tone = document.getElementById('tone').value;
+  const extra = document.getElementById('extra').value.trim();
+  if (!role) { alert('Please enter what you do!'); return; }
+  let bio = '';
+  if (tone === 'witty') {
+    bio = `${role}${topics ? ' | Tweets about ' + topics : ''} | Opinions are my own (and occasionally wrong)${extra ? ' | ' + extra : ''}`;
+  } else if (tone === 'professional') {
+    bio = `${role}${topics ? ' | ' + topics : ''}${extra ? ' | ' + extra : ''} | Views my own`;
+  } else if (tone === 'casual') {
+    bio = `${name ? name + ' — ' : ''}${role} who loves ${topics || 'sharing ideas'}${extra ? ' | ' + extra : ''} 👋`;
+  } else if (tone === 'funny') {
+    bio = `${role} by day, ${topics ? topics.split(',')[0].trim() + ' tweeter' : 'internet person'} by night${extra ? ' | ' + extra : ''} | Send help`;
+  } else {
+    bio = `${role}${topics ? ' · ' + topics : ''}${extra ? ' · ' + extra : ''}`;
+  }
+  if (bio.length > 160) bio = bio.substring(0, 157) + '...';
+  document.getElementById('bio-text').textContent = bio;
+  document.getElementById('char-count').textContent = bio.length + ' / 160 characters';
+  document.getElementById('result').style.display = 'block';
+}
+function copyBio() {
+  const text = document.getElementById('bio-text').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = '✅ Copied!';
+    setTimeout(() => btn.textContent = 'Copy Bio', 2000);
+  });
+}
+</script>
+</body>
+</html>
