@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.mybiomaker.info/instagram-bio-generator.html" />
+  <title>Instagram Bio Generator — Free AI Bio for Instagram</title>
+  <meta name="description" content="Free Instagram bio generator. Create a catchy, creative Instagram bio in seconds. Perfect for creators, businesses and personal profiles.">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,sans-serif;background:linear-gradient(135deg,#f8f0ff,#fff0f8);color:#1a1a1a;min-height:100vh}
+    header{background:#fff;border-bottom:1px solid #f0d5ff;padding:14px 24px;display:flex;align-items:center;gap:12px}
+    header h1{font-size:20px;font-weight:500}
+    header a{color:#888;text-decoration:none;font-size:14px;margin-left:auto}
+    header a:hover{color:#c13584}
+    .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+    .hero{text-align:center;margin-bottom:2.5rem}
+    .hero h2{font-size:28px;font-weight:600;margin-bottom:8px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .hero p{font-size:15px;color:#888;line-height:1.6}
+    .card{background:#fff;border-radius:12px;padding:2rem;margin-bottom:2rem;border:1px solid #f0d5ff}
+    label{font-size:14px;color:#666;display:block;margin-bottom:6px;font-weight:500}
+    input,select,textarea{width:100%;padding:12px;background:#faf8ff;border:1px solid #e8d5ff;border-radius:8px;color:#1a1a1a;font-size:15px;margin-bottom:1.25rem;font-family:system-ui,sans-serif}
+    textarea{resize:vertical;min-height:80px}
+    button.main-btn{width:100%;padding:14px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;border-radius:8px;color:#fff;font-size:16px;font-weight:500;cursor:pointer}
+    .result-box{background:#faf8ff;border-radius:8px;padding:1.5rem;margin-top:1.5rem;display:none;border:1px solid #e8d5ff}
+    .result-bio{font-size:15px;line-height:1.7;color:#333;margin-bottom:1rem;white-space:pre-line}
+    .copy-btn{padding:10px 20px;background:#833ab4;border:none;border-radius:8px;color:#fff;font-size:14px;cursor:pointer}
+    .copy-btn:hover{background:#6a2d91}
+    .char-count{font-size:12px;color:#888;text-align:right;margin-top:-1rem;margin-bottom:1rem}
+    .examples{display:grid;gap:1rem;margin-top:1.5rem}
+    .example-card{background:#fff;border-radius:8px;padding:1rem;border:1px solid #f0d5ff}
+    .example-tag{font-size:11px;color:#833ab4;font-weight:600;margin-bottom:0.5rem}
+    .example-text{font-size:14px;color:#333;line-height:1.6}
+    .seo-section{max-width:800px;margin:2rem auto;padding:0 1rem;color:#555;line-height:1.7}
+    .seo-section h2{font-size:1.4rem;margin-bottom:1rem;color:#1a1a1a}
+    .seo-section h3{font-size:1.1rem;margin:1.5rem 0 0.5rem;color:#1a1a1a}
+    .seo-section p{margin-bottom:1rem}
+    .seo-section ul{padding-left:1.2rem;margin-bottom:1rem}
+    .seo-section li{margin-bottom:0.5rem}
+    footer{text-align:center;padding:2rem;font-size:12px;color:#bbb;border-top:1px solid #f0d5ff;margin-top:2rem}
+    footer a{color:#833ab4;text-decoration:none}
+  </style>
+</head>
+<body>
+<header>
+  <h1>🧬 MyBioMaker</h1>
+  <a href="/">← Back to Bio Generator</a>
+</header>
+<div class="container">
+  <div class="hero">
+    <h2>Instagram Bio Generator</h2>
+    <p>Create a catchy, scroll-stopping Instagram bio in seconds. Free, no sign-up needed.</p>
+  </div>
+  <div class="card">
+    <label for="name">Your name or brand</label>
+    <input type="text" id="name" placeholder="e.g. Sophie, TravelWithAlex, GlowSkin...">
+    <label for="role">What do you do?</label>
+    <input type="text" id="role" placeholder="e.g. Travel photographer, Fitness coach, Food blogger...">
+    <label for="interests">Your interests or niche (optional)</label>
+    <input type="text" id="interests" placeholder="e.g. sunsets, coffee, sustainable fashion...">
+    <label for="tone">Tone</label>
+    <select id="tone">
+      <option value="creative">Creative & Expressive</option>
+      <option value="funny">Funny & Playful</option>
+      <option value="professional">Professional</option>
+      <option value="minimal">Minimal & Clean</option>
+      <option value="inspirational">Inspirational</option>
+    </select>
+    <label for="cta">Call to action (optional)</label>
+    <input type="text" id="cta" placeholder="e.g. DM for collabs, Link below 👇, New post every Monday...">
+    <button class="main-btn" onclick="generateBio()">✨ Generate Instagram Bio</button>
+    <div class="result-box" id="result">
+      <div class="result-bio" id="bio-text"></div>
+      <div class="char-count" id="char-count"></div>
+      <button class="copy-btn" onclick="copyBio()">Copy Bio</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="font-size:1.1rem;margin-bottom:1rem;color:#833ab4">📸 Instagram Bio Examples</h3>
+    <div class="examples">
+      <div class="example-card">
+        <div class="example-tag">TRAVEL CREATOR</div>
+        <div class="example-text">✈️ Collecting passport stamps & sunsets<br>📍 Currently: Bali<br>📸 Travel tips & hidden gems<br>👇 My travel guide</div>
+      </div>
+      <div class="example-card">
+        <div class="example-tag">FITNESS COACH</div>
+        <div class="example-text">💪 Helping you build strength & confidence<br>🏋️ Personal trainer | Online coaching<br>✅ 500+ clients transformed<br>📲 DM "START" to begin your journey</div>
+      </div>
+      <div class="example-card">
+        <div class="example-tag">FOOD BLOGGER</div>
+        <div class="example-text">🍳 Turning simple ingredients into magic<br>📍 Paris-based home cook<br>🌿 Plant-based recipes every week<br>⬇️ Free recipe e-book below</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="seo-section">
+  <h2>What Makes a Great Instagram Bio?</h2>
+  <p>Your Instagram bio has just 150 characters to make an impression — that's roughly the length of a tweet. The best Instagram bios do three things: tell visitors who you are, show your personality, and give them a reason to follow or click your link. Our Instagram bio generator helps you nail all three in seconds.</p>
+
+  <h2>Instagram Bio Tips by Profile Type</h2>
+  <h3>For Personal Creators & Influencers</h3>
+  <p>Lead with your niche, add a personality touch, and end with a clear call to action. Use line breaks and emojis to make it scannable — Instagram bios are read in under 3 seconds.</p>
+  <h3>For Businesses & Brands</h3>
+  <p>State exactly what you do in the first line. Add a value proposition ("Free shipping worldwide", "New drops every Friday") and a direct link call to action. Keep it professional but human.</p>
+  <h3>For Artists & Creatives</h3>
+  <p>Let your personality shine. A clever line, a unique perspective, or a touch of humor makes creative profiles memorable. Don't be afraid to be specific — "abstract watercolor paintings of European cities" beats "artist & dreamer" every time.</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <h3>How long can an Instagram bio be?</h3>
+  <p>Instagram bios are limited to 150 characters. Our generator keeps your bio within this limit and shows you the character count so you can fine-tune it before copying.</p>
+  <h3>Should I use emojis in my Instagram bio?</h3>
+  <p>Yes — emojis break up text visually, add personality, and make bios easier to scan. Use them as bullet points or to highlight key information. Don't overdo it — 3 to 5 emojis is usually the sweet spot.</p>
+  <h3>What should I put in my Instagram bio?</h3>
+  <p>Include: who you are, what you do, a personality touch or unique detail, and a call to action (link, DM, follow for content type). Keep each element to one line for maximum readability.</p>
+  <h3>Is the Instagram bio generator free?</h3>
+  <p>Yes, completely free. No account, no subscription — generate as many bios as you like until you find the perfect one.</p>
+</section>
+
+<footer>
+  © 2026 MyBioMaker.info — <a href="/">Bio Generator</a> · <a href="/privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+function generateBio() {
+  const name = document.getElementById('name').value.trim();
+  const role = document.getElementById('role').value.trim();
+  const interests = document.getElementById('interests').value.trim();
+  const tone = document.getElementById('tone').value;
+  const cta = document.getElementById('cta').value.trim();
+  if (!role) { alert('Please enter what you do!'); return; }
+  const toneEmojis = {creative:'🎨',funny:'😄',professional:'💼',minimal:'·',inspirational:'✨'};
+  const emoji = toneEmojis[tone];
+  let bio = '';
+  if (tone === 'funny') {
+    bio = `${name ? name + ' | ' : ''}${emoji} ${role} (professionally)\n${interests ? '🌀 Obsessed with ' + interests : '🌀 Making it up as I go'}\n${cta || '👇 Check the link (it\'s worth it)'}`;
+  } else if (tone === 'minimal') {
+    bio = `${name ? name + '\n' : ''}${role}${interests ? '\n' + interests : ''}\n${cta || '↓'}`;
+  } else if (tone === 'inspirational') {
+    bio = `${emoji} ${name ? name + ' — ' : ''}${role}\n${interests ? '💫 Passionate about ' + interests : '💫 Building something meaningful'}\n${cta || '✨ New content every week'}`;
+  } else if (tone === 'professional') {
+    bio = `${name ? name + '\n' : ''}💼 ${role}\n${interests ? '📌 ' + interests : ''}\n${cta || '📲 DM for enquiries'}`;
+  } else {
+    bio = `${emoji} ${name ? name + ' | ' : ''}${role}\n${interests ? '🌿 ' + interests : '🌿 Living for the little things'}\n${cta || '👇 See what I\'m creating'}`;
+  }
+  bio = bio.replace(/\n\n/g, '\n').trim();
+  document.getElementById('bio-text').textContent = bio;
+  document.getElementById('char-count').textContent = bio.length + ' / 150 characters';
+  document.getElementById('result').style.display = 'block';
+}
+function copyBio() {
+  const text = document.getElementById('bio-text').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = '✅ Copied!';
+    setTimeout(() => btn.textContent = 'Copy Bio', 2000);
+  });
+}
+</script>
+</body>
+</html>
