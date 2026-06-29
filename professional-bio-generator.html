@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.mybiomaker.info/professional-bio-generator.html" />
+  <title>Professional Bio Generator — Free Short & Long Bio Writer</title>
+  <meta name="description" content="Free professional bio generator. Create a polished short or long professional bio in seconds. Perfect for websites, speaker profiles and press kits.">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh}
+    header{background:#fff;border-bottom:1px solid #e0e0d8;padding:14px 24px;display:flex;align-items:center;gap:12px}
+    header h1{font-size:20px;font-weight:500}
+    header a{color:#888;text-decoration:none;font-size:14px;margin-left:auto}
+    header a:hover{color:#2c5282}
+    .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+    .hero{text-align:center;margin-bottom:2.5rem}
+    .hero h2{font-size:28px;font-weight:600;margin-bottom:8px;color:#2c5282}
+    .hero p{font-size:15px;color:#888;line-height:1.6}
+    .card{background:#fff;border-radius:12px;padding:2rem;margin-bottom:2rem;border:1px solid #e0e0d8}
+    label{font-size:14px;color:#666;display:block;margin-bottom:6px;font-weight:500}
+    input,select,textarea{width:100%;padding:12px;background:#f9f9f6;border:1px solid #e0e0d8;border-radius:8px;color:#1a1a1a;font-size:15px;margin-bottom:1.25rem;font-family:system-ui,sans-serif}
+    textarea{resize:vertical;min-height:80px}
+    button.main-btn{width:100%;padding:14px;background:#2c5282;border:none;border-radius:8px;color:#fff;font-size:16px;font-weight:500;cursor:pointer}
+    button.main-btn:hover{background:#1a3a5c}
+    .result-box{background:#f9f9f6;border-radius:8px;padding:1.5rem;margin-top:1.5rem;display:none;border:1px solid #e0e0d8}
+    .result-label{font-size:12px;font-weight:600;color:#2c5282;margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.05em}
+    .result-text{font-size:15px;line-height:1.8;color:#333;margin-bottom:1rem;white-space:pre-line}
+    .copy-btn{padding:10px 20px;background:#2c5282;border:none;border-radius:8px;color:#fff;font-size:14px;cursor:pointer}
+    .copy-btn:hover{background:#1a3a5c}
+    .tabs{display:flex;gap:0.5rem;margin-bottom:1.5rem}
+    .tab{padding:8px 16px;background:#f9f9f6;border:1px solid #e0e0d8;border-radius:20px;cursor:pointer;font-size:14px;color:#666}
+    .tab.active{background:#2c5282;color:#fff;border-color:#2c5282}
+    .seo-section{max-width:800px;margin:2rem auto;padding:0 1rem;color:#555;line-height:1.7}
+    .seo-section h2{font-size:1.4rem;margin-bottom:1rem;color:#1a1a1a}
+    .seo-section h3{font-size:1.1rem;margin:1.5rem 0 0.5rem;color:#1a1a1a}
+    .seo-section p{margin-bottom:1rem}
+    .seo-section ul{padding-left:1.2rem;margin-bottom:1rem}
+    .seo-section li{margin-bottom:0.5rem}
+    footer{text-align:center;padding:2rem;font-size:12px;color:#bbb;border-top:1px solid #e0e0d8;margin-top:2rem}
+    footer a{color:#2c5282;text-decoration:none}
+  </style>
+</head>
+<body>
+<header>
+  <h1>🧬 MyBioMaker</h1>
+  <a href="/">← Back to Bio Generator</a>
+</header>
+<div class="container">
+  <div class="hero">
+    <h2>Professional Bio Generator</h2>
+    <p>Create a polished, professional bio for your website, speaker profile, press kit or portfolio.</p>
+  </div>
+  <div class="card">
+    <label>Bio length</label>
+    <div class="tabs">
+      <div class="tab active" onclick="setLength('short', this)">Short (50–80 words)</div>
+      <div class="tab" onclick="setLength('long', this)">Long (150–200 words)</div>
+    </div>
+    <label for="name">Full name</label>
+    <input type="text" id="name" placeholder="e.g. Dr. Sarah Mitchell">
+    <label for="role">Current title & organisation</label>
+    <input type="text" id="role" placeholder="e.g. CEO at TechCorp, Senior Consultant at McKinsey...">
+    <label for="experience">Years of experience & field</label>
+    <input type="text" id="experience" placeholder="e.g. 15 years in healthcare technology...">
+    <label for="achievement">Key achievement or credential</label>
+    <input type="text" id="achievement" placeholder="e.g. Author of 3 books, TEDx speaker, Forbes 30 Under 30...">
+    <label for="mission">What drives you or your mission</label>
+    <input type="text" id="mission" placeholder="e.g. Helping SMEs adopt AI, Democratising access to education...">
+    <label for="personal">Personal detail (optional)</label>
+    <input type="text" id="personal" placeholder="e.g. Based in New York, avid marathon runner, mother of two...">
+    <button class="main-btn" onclick="generateBio()">✍️ Generate Professional Bio</button>
+    <div class="result-box" id="result">
+      <div class="result-label">Your Professional Bio</div>
+      <div class="result-text" id="bio-text"></div>
+      <button class="copy-btn" onclick="copyBio()">Copy Bio</button>
+    </div>
+  </div>
+</div>
+
+<section class="seo-section">
+  <h2>What Is a Professional Bio?</h2>
+  <p>A professional bio is a short, polished paragraph that summarises who you are, what you do, and what makes you credible — written in the third person for use on websites, speaker profiles, press kits, conference programmes, and portfolios. It's the professional world's equivalent of a first impression, and it needs to be both accurate and compelling.</p>
+
+  <h2>Short Bio vs Long Bio — Which Do You Need?</h2>
+  <h3>Short professional bio (50–80 words)</h3>
+  <p>Used for speaker introductions, social media profiles, email signatures, and anywhere space is limited. It should cover your role, your key credential, and one line about your mission or impact. Every word counts — cut anything that doesn't add information.</p>
+  <h3>Long professional bio (150–200 words)</h3>
+  <p>Used for website About pages, press kits, conference programmes, and grant applications. It can include career history, key achievements, publications or media appearances, and a personal detail that humanises you.</p>
+
+  <h2>Professional Bio Tips</h2>
+  <ul>
+    <li><strong>Write in third person</strong> — "Sarah is a..." not "I am a..." — for formal professional contexts.</li>
+    <li><strong>Lead with your current role</strong> — don't bury the most relevant information.</li>
+    <li><strong>Be specific about achievements</strong> — numbers and named credentials ("TEDx speaker," "Forbes 30 Under 30") carry more weight than adjectives.</li>
+    <li><strong>End with a human touch</strong> — a personal detail (where you live, a hobby, your family) makes you more relatable and memorable.</li>
+    <li><strong>Keep it updated</strong> — a bio with an outdated job title undermines your credibility.</li>
+  </ul>
+
+  <h2>Frequently Asked Questions</h2>
+  <h3>How do you write a professional bio about yourself?</h3>
+  <p>Start with your current role and organisation, add your years of experience and field, include your most notable achievement or credential, describe your mission or what you help people do, and close with a personal detail. Write in third person for formal use.</p>
+  <h3>How long should a professional bio be?</h3>
+  <p>A short bio should be 50–80 words — enough for a speaker introduction or a profile page sidebar. A full bio should be 150–200 words — long enough to establish credibility without losing the reader's attention.</p>
+  <h3>Should a professional bio be written in first or third person?</h3>
+  <p>Third person ("Sarah is a...") is standard for formal professional bios used on websites, speaker profiles, and press kits. First person ("I am a...") works better for personal About pages where a conversational tone is more appropriate.</p>
+  <h3>Is the professional bio generator free?</h3>
+  <p>Yes, completely free. No sign-up needed — generate short and long versions until you find the one that fits perfectly.</p>
+</section>
+
+<footer>
+  © 2026 MyBioMaker.info — <a href="/">Bio Generator</a> · <a href="/instagram-bio-generator.html">Instagram Bio</a> · <a href="/linkedin-bio-generator.html">LinkedIn Bio</a> · <a href="/tiktok-bio-generator.html">TikTok Bio</a> · <a href="/twitter-bio-generator.html">Twitter Bio</a> · <a href="/privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+let bioLength = 'short';
+function setLength(len, btn) {
+  bioLength = len;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+}
+function generateBio() {
+  const name = document.getElementById('name').value.trim();
+  const role = document.getElementById('role').value.trim();
+  const experience = document.getElementById('experience').value.trim();
+  const achievement = document.getElementById('achievement').value.trim();
+  const mission = document.getElementById('mission').value.trim();
+  const personal = document.getElementById('personal').value.trim();
+  if (!name || !role) { alert('Please enter your name and role!'); return; }
+  let bio = '';
+  if (bioLength === 'short') {
+    bio = `${name} is ${role}${experience ? ' with ' + experience : ''}. ${achievement ? achievement + '. ' : ''}${mission ? name.split(' ')[0] + ' is passionate about ' + mission.toLowerCase() + '.' : ''}${personal ? ' ' + personal + '.' : ''}`;
+  } else {
+    bio = `${name} is ${role}${experience ? ', bringing ' + experience + ' to every project' : ''}.\n\n${achievement ? 'A ' + achievement + ', ' + name.split(' ')[0] + ' has built a reputation for ' + (mission ? mission.toLowerCase() : 'delivering exceptional results') + '.' : ''}\n\n${mission ? name.split(' ')[0] + '\'s work is driven by a commitment to ' + mission.toLowerCase() + '. ' : ''}Through this work, ${name.split(' ')[0]} has helped organisations and individuals navigate complex challenges and achieve meaningful outcomes.\n\n${personal ? name.split(' ')[0] + ' ' + personal + '.' : ''}`;
+  }
+  bio = bio.replace(/\n\n\n/g, '\n\n').trim();
+  document.getElementById('bio-text').textContent = bio;
+  document.getElementById('result').style.display = 'block';
+}
+function copyBio() {
+  const text = document.getElementById('bio-text').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = '✅ Copied!';
+    setTimeout(() => btn.textContent = 'Copy Bio', 2000);
+  });
+}
+</script>
+</body>
+</html>
