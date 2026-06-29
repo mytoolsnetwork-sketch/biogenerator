@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.mybiomaker.info/linkedin-bio-generator.html" />
+  <title>LinkedIn Bio Generator — Free Professional LinkedIn Summary</title>
+  <meta name="description" content="Free LinkedIn bio generator. Create a compelling LinkedIn summary and headline in seconds. Perfect for job seekers, professionals and entrepreneurs.">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,sans-serif;background:#f0f4f8;color:#1a1a1a;min-height:100vh}
+    header{background:#fff;border-bottom:1px solid #d0e8ff;padding:14px 24px;display:flex;align-items:center;gap:12px}
+    header h1{font-size:20px;font-weight:500}
+    header a{color:#888;text-decoration:none;font-size:14px;margin-left:auto}
+    header a:hover{color:#0077b5}
+    .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+    .hero{text-align:center;margin-bottom:2.5rem}
+    .hero h2{font-size:28px;font-weight:600;margin-bottom:8px;color:#0077b5}
+    .hero p{font-size:15px;color:#888;line-height:1.6}
+    .card{background:#fff;border-radius:12px;padding:2rem;margin-bottom:2rem;border:1px solid #d0e8ff}
+    label{font-size:14px;color:#666;display:block;margin-bottom:6px;font-weight:500}
+    input,select,textarea{width:100%;padding:12px;background:#f8fbff;border:1px solid #d0e8ff;border-radius:8px;color:#1a1a1a;font-size:15px;margin-bottom:1.25rem;font-family:system-ui,sans-serif}
+    textarea{resize:vertical;min-height:80px}
+    button.main-btn{width:100%;padding:14px;background:#0077b5;border:none;border-radius:8px;color:#fff;font-size:16px;font-weight:500;cursor:pointer}
+    button.main-btn:hover{background:#005f8e}
+    .result-box{background:#f8fbff;border-radius:8px;padding:1.5rem;margin-top:1.5rem;display:none;border:1px solid #d0e8ff}
+    .result-label{font-size:12px;font-weight:600;color:#0077b5;margin-bottom:0.5rem;text-transform:uppercase}
+    .result-text{font-size:15px;line-height:1.7;color:#333;margin-bottom:1rem;white-space:pre-line}
+    .copy-btn{padding:10px 20px;background:#0077b5;border:none;border-radius:8px;color:#fff;font-size:14px;cursor:pointer;margin-right:0.5rem}
+    .copy-btn:hover{background:#005f8e}
+    .examples{display:grid;gap:1rem;margin-top:1rem}
+    .example-card{background:#f8fbff;border-radius:8px;padding:1rem;border:1px solid #d0e8ff}
+    .example-tag{font-size:11px;color:#0077b5;font-weight:600;margin-bottom:0.5rem}
+    .example-text{font-size:14px;color:#333;line-height:1.6}
+    .seo-section{max-width:800px;margin:2rem auto;padding:0 1rem;color:#555;line-height:1.7}
+    .seo-section h2{font-size:1.4rem;margin-bottom:1rem;color:#1a1a1a}
+    .seo-section h3{font-size:1.1rem;margin:1.5rem 0 0.5rem;color:#1a1a1a}
+    .seo-section p{margin-bottom:1rem}
+    .seo-section ul{padding-left:1.2rem;margin-bottom:1rem}
+    .seo-section li{margin-bottom:0.5rem}
+    footer{text-align:center;padding:2rem;font-size:12px;color:#bbb;border-top:1px solid #d0e8ff;margin-top:2rem}
+    footer a{color:#0077b5;text-decoration:none}
+  </style>
+</head>
+<body>
+<header>
+  <h1>🧬 MyBioMaker</h1>
+  <a href="/">← Back to Bio Generator</a>
+</header>
+<div class="container">
+  <div class="hero">
+    <h2>LinkedIn Bio Generator</h2>
+    <p>Create a compelling LinkedIn headline and summary that gets you noticed by recruiters and connections.</p>
+  </div>
+  <div class="card">
+    <label for="name">Your name</label>
+    <input type="text" id="name" placeholder="e.g. Sarah Johnson">
+    <label for="role">Current role or target role</label>
+    <input type="text" id="role" placeholder="e.g. Senior Marketing Manager, Software Engineer...">
+    <label for="experience">Years of experience</label>
+    <input type="text" id="experience" placeholder="e.g. 5 years, 10+ years...">
+    <label for="skills">Key skills or expertise</label>
+    <input type="text" id="skills" placeholder="e.g. SEO, Python, team leadership, product strategy...">
+    <label for="achievement">A key achievement (optional)</label>
+    <input type="text" id="achievement" placeholder="e.g. Grew revenue by 40%, Led a team of 15...">
+    <label for="goal">What are you looking for?</label>
+    <select id="goal">
+      <option value="job">New job opportunities</option>
+      <option value="network">Growing my network</option>
+      <option value="clients">Attracting clients</option>
+      <option value="thought">Thought leadership</option>
+    </select>
+    <button class="main-btn" onclick="generateBio()">💼 Generate LinkedIn Bio</button>
+    <div class="result-box" id="result">
+      <div class="result-label">Headline</div>
+      <div class="result-text" id="headline-text"></div>
+      <button class="copy-btn" onclick="copyText('headline-text')">Copy Headline</button>
+      <div style="margin-top:1.5rem;border-top:1px solid #d0e8ff;padding-top:1.5rem">
+        <div class="result-label">Summary</div>
+        <div class="result-text" id="summary-text"></div>
+        <button class="copy-btn" onclick="copyText('summary-text')">Copy Summary</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="font-size:1.1rem;margin-bottom:1rem;color:#0077b5">💼 LinkedIn Bio Examples</h3>
+    <div class="examples">
+      <div class="example-card">
+        <div class="example-tag">MARKETING PROFESSIONAL</div>
+        <div class="example-text"><strong>Headline:</strong> Senior Marketing Manager | Growth Strategy | B2B & SaaS | Helping brands scale through data-driven campaigns<br><br><strong>Summary:</strong> With 8 years in B2B marketing, I specialise in building demand generation engines that drive measurable growth. I've helped companies across Europe scale from 6 to 7-figure revenue through SEO, paid media, and content strategy. Open to new opportunities in senior marketing roles.</div>
+      </div>
+      <div class="example-card">
+        <div class="example-tag">SOFTWARE ENGINEER</div>
+        <div class="example-text"><strong>Headline:</strong> Full-Stack Developer | React & Node.js | Building scalable web applications<br><br><strong>Summary:</strong> I'm a full-stack developer with 5 years of experience building fast, scalable web applications. Passionate about clean code and great user experiences. Currently open to senior developer roles in product-led companies.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="seo-section">
+  <h2>How to Write a Great LinkedIn Bio</h2>
+  <p>Your LinkedIn bio has two parts that matter most: your headline (visible everywhere) and your summary (visible on your profile). Together they determine whether recruiters click through, whether potential clients reach out, and whether the right people find you in search.</p>
+
+  <h2>LinkedIn Headline Best Practices</h2>
+  <p>Your LinkedIn headline gets 220 characters and appears next to your name in every comment, connection request, and search result. The best headlines include your role, your key skill or specialty, and a value statement — all separated clearly so the eye can scan them quickly.</p>
+
+  <h2>LinkedIn Summary Best Practices</h2>
+  <ul>
+    <li><strong>Start with a hook</strong> — your first two lines appear before "see more," so make them count.</li>
+    <li><strong>Be specific about your expertise</strong> — vague summaries get ignored. Name the tools, industries, and outcomes you deliver.</li>
+    <li><strong>Include keywords</strong> — LinkedIn's search algorithm surfaces profiles that include the keywords recruiters search for.</li>
+    <li><strong>End with a call to action</strong> — tell people what to do next: connect, message, or visit your website.</li>
+  </ul>
+
+  <h2>Frequently Asked Questions</h2>
+  <h3>What should I write in my LinkedIn bio?</h3>
+  <p>Your LinkedIn bio (summary) should cover: what you do and who you help, your key skills and experience, a notable achievement, and a clear call to action. Keep it between 150 and 300 words for maximum impact.</p>
+  <h3>How long should a LinkedIn summary be?</h3>
+  <p>LinkedIn allows up to 2,600 characters in the summary section, but the sweet spot is 150-300 words. Long enough to show depth, short enough to be read in full.</p>
+  <h3>Should I write my LinkedIn bio in first or third person?</h3>
+  <p>First person ("I help companies...") feels more personal and direct — it's the recommended approach for most profiles. Third person works better for very senior executives or public figures where a formal, press-release tone is expected.</p>
+  <h3>Is the LinkedIn bio generator free?</h3>
+  <p>Yes, completely free. No account, no subscription — generate as many versions as you need.</p>
+</section>
+
+<footer>
+  © 2026 MyBioMaker.info — <a href="/">Bio Generator</a> · <a href="/instagram-bio-generator.html">Instagram Bio</a> · <a href="/privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+function generateBio() {
+  const name = document.getElementById('name').value.trim();
+  const role = document.getElementById('role').value.trim();
+  const experience = document.getElementById('experience').value.trim();
+  const skills = document.getElementById('skills').value.trim();
+  const achievement = document.getElementById('achievement').value.trim();
+  const goal = document.getElementById('goal').value;
+  if (!role) { alert('Please enter your role!'); return; }
+  const headline = `${role}${skills ? ' | ' + skills.split(',')[0].trim() : ''} | ${experience ? experience + ' experience' : 'Experienced professional'}`;
+  const goalText = {
+    job: 'Open to new opportunities in ' + role.toLowerCase() + ' roles.',
+    network: 'Always happy to connect with like-minded professionals.',
+    clients: 'Available for new projects and collaborations — DM me to discuss.',
+    thought: 'Sharing insights on ' + (skills || 'my field') + ' — follow for weekly content.'
+  };
+  const summary = `${name ? 'I\'m ' + name + ', a' : 'A'} ${role.toLowerCase()} with ${experience || 'extensive'} experience${skills ? ' specialising in ' + skills : ''}.\n\n${achievement ? achievement + '.\n\n' : ''}${goalText[goal]}`;
+  document.getElementById('headline-text').textContent = headline;
+  document.getElementById('summary-text').textContent = summary;
+  document.getElementById('result').style.display = 'block';
+}
+function copyText(id) {
+  const text = document.getElementById(id).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btns = document.querySelectorAll('.copy-btn');
+    btns.forEach(btn => { if (btn.onclick?.toString().includes(id)) { btn.textContent = '✅ Copied!'; setTimeout(() => btn.textContent = id.includes('headline') ? 'Copy Headline' : 'Copy Summary', 2000); }});
+  });
+}
+</script>
+</body>
+</html>
