@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://www.mybiomaker.info/tiktok-bio-generator.html" />
+  <title>TikTok Bio Generator — Free Catchy TikTok Bio Ideas</title>
+  <meta name="description" content="Free TikTok bio generator. Create a fun, catchy TikTok bio that gets followers. Perfect for creators, brands and personal profiles.">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,sans-serif;background:#0a0a0a;color:#fff;min-height:100vh}
+    header{background:#111;border-bottom:1px solid #222;padding:14px 24px;display:flex;align-items:center;gap:12px}
+    header h1{font-size:20px;font-weight:500}
+    header a{color:#888;text-decoration:none;font-size:14px;margin-left:auto}
+    header a:hover{color:#fe2c55}
+    .container{max-width:800px;margin:0 auto;padding:2rem 1rem}
+    .hero{text-align:center;margin-bottom:2.5rem}
+    .hero h2{font-size:28px;font-weight:600;margin-bottom:8px;background:linear-gradient(135deg,#fe2c55,#25f4ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .hero p{font-size:15px;color:#888;line-height:1.6}
+    .card{background:#111;border-radius:12px;padding:2rem;margin-bottom:2rem;border:1px solid #222}
+    label{font-size:14px;color:#aaa;display:block;margin-bottom:6px;font-weight:500}
+    input,select{width:100%;padding:12px;background:#1a1a1a;border:1px solid #333;border-radius:8px;color:#fff;font-size:15px;margin-bottom:1.25rem;font-family:system-ui,sans-serif}
+    button.main-btn{width:100%;padding:14px;background:linear-gradient(135deg,#fe2c55,#25f4ee);border:none;border-radius:8px;color:#fff;font-size:16px;font-weight:500;cursor:pointer}
+    .result-box{background:#1a1a1a;border-radius:8px;padding:1.5rem;margin-top:1.5rem;display:none;border:1px solid #333}
+    .result-bio{font-size:15px;line-height:1.8;color:#fff;margin-bottom:1rem;white-space:pre-line}
+    .char-count{font-size:12px;color:#888;margin-bottom:1rem}
+    .copy-btn{padding:10px 20px;background:#fe2c55;border:none;border-radius:8px;color:#fff;font-size:14px;cursor:pointer}
+    .copy-btn:hover{background:#d4244a}
+    .examples{display:grid;gap:1rem;margin-top:1rem}
+    .example-card{background:#1a1a1a;border-radius:8px;padding:1rem;border:1px solid #333}
+    .example-tag{font-size:11px;color:#fe2c55;font-weight:600;margin-bottom:0.5rem}
+    .example-text{font-size:14px;color:#ccc;line-height:1.7}
+    .seo-section{max-width:800px;margin:2rem auto;padding:0 1rem;color:#aaa;line-height:1.7}
+    .seo-section h2{font-size:1.4rem;margin-bottom:1rem;color:#fff}
+    .seo-section h3{font-size:1.1rem;margin:1.5rem 0 0.5rem;color:#fff}
+    .seo-section p{margin-bottom:1rem}
+    .seo-section ul{padding-left:1.2rem;margin-bottom:1rem}
+    .seo-section li{margin-bottom:0.5rem}
+    footer{text-align:center;padding:2rem;font-size:12px;color:#555;border-top:1px solid #222;margin-top:2rem}
+    footer a{color:#fe2c55;text-decoration:none}
+  </style>
+</head>
+<body>
+<header>
+  <h1>🧬 MyBioMaker</h1>
+  <a href="/">← Back to Bio Generator</a>
+</header>
+<div class="container">
+  <div class="hero">
+    <h2>TikTok Bio Generator</h2>
+    <p>Create a fun, scroll-stopping TikTok bio that turns visitors into followers.</p>
+  </div>
+  <div class="card">
+    <label for="name">Your name or username</label>
+    <input type="text" id="name" placeholder="e.g. Alex, DanceWithMia, TechTalkDaily...">
+    <label for="content">What content do you make?</label>
+    <input type="text" id="content" placeholder="e.g. Dance videos, cooking hacks, comedy skits...">
+    <label for="posting">How often do you post?</label>
+    <input type="text" id="posting" placeholder="e.g. Daily, 3x a week, Every Friday...">
+    <label for="tone">Vibe</label>
+    <select id="tone">
+      <option value="funny">Funny & Chaotic</option>
+      <option value="creative">Creative & Artsy</option>
+      <option value="informative">Informative & Educational</option>
+      <option value="lifestyle">Lifestyle & Aesthetic</option>
+      <option value="motivational">Motivational</option>
+    </select>
+    <label for="cta">Call to action (optional)</label>
+    <input type="text" id="cta" placeholder="e.g. Follow for daily laughs, Link in bio for discount...">
+    <button class="main-btn" onclick="generateBio()">🎵 Generate TikTok Bio</button>
+    <div class="result-box" id="result">
+      <div class="result-bio" id="bio-text"></div>
+      <div class="char-count" id="char-count"></div>
+      <button class="copy-btn" onclick="copyBio()">Copy Bio</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="font-size:1.1rem;margin-bottom:1rem;color:#fe2c55">🎵 TikTok Bio Examples</h3>
+    <div class="examples">
+      <div class="example-card">
+        <div class="example-tag">COMEDY CREATOR</div>
+        <div class="example-text">😂 Making you laugh since 2023<br>🎬 New video every day (yes, really)<br>📍 Living my chaotic best life<br>👇 My merch (it's actually good)</div>
+      </div>
+      <div class="example-card">
+        <div class="example-tag">FOOD CREATOR</div>
+        <div class="example-text">🍳 5-ingredient recipes that actually slap<br>👨‍🍳 Not a chef, just hungry<br>📅 New recipe every Tuesday<br>💬 DM me your food disasters</div>
+      </div>
+      <div class="example-card">
+        <div class="example-tag">FITNESS CREATOR</div>
+        <div class="example-text">💪 Your daily dose of gym motivation<br>🏋️ No gym? No problem.<br>📱 Home workouts that actually work<br>⬇️ Free workout plan in bio</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="seo-section">
+  <h2>What Makes a Great TikTok Bio?</h2>
+  <p>TikTok bios are limited to 80 characters — less than a tweet. In that tiny space, you need to tell people who you are, what you make, and why they should follow. The best TikTok bios are punchy, specific, and show personality in every word.</p>
+
+  <h2>TikTok Bio Tips</h2>
+  <ul>
+    <li><strong>Lead with your content type</strong> — tell people exactly what they'll see if they follow you.</li>
+    <li><strong>Use your posting schedule</strong> — "New video every day" or "Every Friday" gives people a reason to follow rather than just like and scroll.</li>
+    <li><strong>Show personality</strong> — TikTok rewards authenticity. A funny, self-aware line beats a formal description every time.</li>
+    <li><strong>End with a CTA</strong> — "Link in bio," "DM me," or "Follow for daily X" tells people what to do next.</li>
+    <li><strong>Use line breaks</strong> — breaking your bio into 3-4 short lines makes it much easier to read on mobile.</li>
+  </ul>
+
+  <h2>TikTok Bio Ideas by Niche</h2>
+  <h3>For Comedy Creators</h3>
+  <p>Lead with a self-aware joke about your content. "Making videos my mum thinks are embarrassing" is more compelling than "Comedy creator | Daily content." Specificity and self-awareness are your biggest assets.</p>
+  <h3>For Educational Creators</h3>
+  <p>State exactly what you teach and who it's for. "Explaining finance in plain English | New video every Monday" tells potential followers exactly what they're signing up for — and sets expectations you can meet.</p>
+  <h3>For Lifestyle Creators</h3>
+  <p>Paint a picture of your aesthetic in a few words. Location, vibe, and one defining interest work well: "🌿 Slow living in the countryside | Recipes, interiors & honest life."</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <h3>How long can a TikTok bio be?</h3>
+  <p>TikTok bios are limited to 80 characters. This is much shorter than Instagram or Twitter, which is why every word needs to count.</p>
+  <h3>Should I use emojis in my TikTok bio?</h3>
+  <p>Yes — emojis are essential on TikTok. They act as visual bullet points, add personality, and make your bio easier to scan on a small screen. Use 2-4 emojis maximum.</p>
+  <h3>What should a TikTok bio say?</h3>
+  <p>Your TikTok bio should say: what content you make, how often you post, and what makes you different or worth following. Keep it fun, specific, and under 80 characters.</p>
+  <h3>Is the TikTok bio generator free?</h3>
+  <p>Yes, completely free. No sign-up needed — generate as many bios as you like.</p>
+</section>
+
+<footer>
+  © 2026 MyBioMaker.info — <a href="/">Bio Generator</a> · <a href="/instagram-bio-generator.html">Instagram Bio</a> · <a href="/linkedin-bio-generator.html">LinkedIn Bio</a> · <a href="/privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+function generateBio() {
+  const name = document.getElementById('name').value.trim();
+  const content = document.getElementById('content').value.trim();
+  const posting = document.getElementById('posting').value.trim();
+  const tone = document.getElementById('tone').value;
+  const cta = document.getElementById('cta').value.trim();
+  if (!content) { alert('Please enter what content you make!'); return; }
+  const vibes = {
+    funny: ['😂', 'Making you laugh with', 'Chaotic good energy |'],
+    creative: ['🎨', 'Creating', 'Art & soul |'],
+    informative: ['🧠', 'Teaching you', 'Learn something new |'],
+    lifestyle: ['🌿', 'Living for', 'Aesthetic vibes |'],
+    motivational: ['💪', 'Inspiring you through', 'Your daily motivation |']
+  };
+  const [emoji, verb, tag] = vibes[tone];
+  let bio = `${emoji} ${name ? name + ' | ' : ''}${verb} ${content.toLowerCase()}\n${posting ? '📅 ' + posting : ''}\n${cta || '👇 Follow for more'}`;
+  bio = bio.replace(/\n\n/g, '\n').trim();
+  document.getElementById('bio-text').textContent = bio;
+  document.getElementById('char-count').textContent = bio.replace(/\n/g, ' ').length + ' characters';
+  document.getElementById('result').style.display = 'block';
+}
+function copyBio() {
+  const text = document.getElementById('bio-text').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = '✅ Copied!';
+    setTimeout(() => btn.textContent = 'Copy Bio', 2000);
+  });
+}
+</script>
+</body>
+</html>
